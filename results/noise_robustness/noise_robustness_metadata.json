@@ -1,0 +1,16 @@
+{
+  "noise_model": "Independent zero-mean Gaussian perturbation added to each RF/FSO/THz SNR observation in the held-out test set.",
+  "sigma_db": [
+    0,
+    1,
+    2,
+    3,
+    5
+  ],
+  "labels": "Preserved from the clean physical reference policy.",
+  "energy_consistency": "For noisy full-information observations, capacity and transmit-energy-per-bit features were recomputed from the perturbed SNR, channel bandwidth, and transmit power; clean Eb values were not retained.",
+  "training": "Models trained only on clean training data.",
+  "evaluation": "10 grouped realization-level splits; each split holds out 2 of 10 complete realizations per scenario.",
+  "environment_only_control": "Unaffected by SNR measurement noise because SNR/Eb are not model inputs.",
+  "interpretation": "This experiment evaluates measurement uncertainty only; it does not represent propagation-model mismatch or environmental-variable uncertainty."
+}

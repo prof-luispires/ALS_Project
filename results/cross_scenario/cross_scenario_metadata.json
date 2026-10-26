@@ -1,0 +1,72 @@
+{
+  "protocols": {
+    "A_clear_to_rain_fog_worst": {
+      "train": [
+        "clear"
+      ],
+      "test": [
+        "rain",
+        "fog",
+        "worst"
+      ],
+      "note": "Single-class training set (FSO only)."
+    },
+    "B_clear_rain_to_fog_worst": {
+      "train": [
+        "clear",
+        "rain"
+      ],
+      "test": [
+        "fog",
+        "worst"
+      ],
+      "note": "RF/FSO present in training; THz absent."
+    },
+    "C_clear_rain_fog_to_worst": {
+      "train": [
+        "clear",
+        "rain",
+        "fog"
+      ],
+      "test": [
+        "worst"
+      ],
+      "note": "All three classes present in training, although THz is rare."
+    }
+  },
+  "seeds_random_forest": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "feature_sets": {
+    "environment_only": [
+      "distance_m",
+      "rain_rate_mmph",
+      "humidity_pct",
+      "visibility_km",
+      "Cn2"
+    ],
+    "full_information": [
+      "distance_m",
+      "rain_rate_mmph",
+      "humidity_pct",
+      "visibility_km",
+      "Cn2",
+      "SNR_RF_dB",
+      "SNR_FSO_dB",
+      "SNR_THz_dB",
+      "Eb_RF_J_per_bit",
+      "Eb_FSO_J_per_bit",
+      "Eb_THz_J_per_bit"
+    ]
+  },
+  "note": "Protocol A is a single-class training stress test. LinearSVM is deterministic and therefore run once; RandomForest uses 10 seeds."
+}

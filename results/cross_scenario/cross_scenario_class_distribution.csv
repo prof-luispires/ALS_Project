@@ -1,0 +1,4 @@
+protocol,train_scenarios,test_scenarios,train_RF,train_FSO,train_THz,test_RF,test_FSO,test_THz,note
+A_clear_to_rain_fog_worst,clear,"rain,fog,worst",0,4000,0,4201,6973,826,Single-class training set (FSO only).
+B_clear_rain_to_fog_worst,"clear,rain","fog,worst",473,7527,0,3728,3446,826,RF/FSO present in training; THz absent.
+C_clear_rain_fog_to_worst,"clear,rain,fog",worst,1704,10263,33,2497,710,793,"All three classes present in training, although THz is rare."
