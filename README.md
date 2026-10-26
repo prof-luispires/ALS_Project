@@ -1,6 +1,6 @@
-# Hybrid RF/FSO/THz — JWCN R2 reproducibility release candidate
+# Hybrid RF/FSO/THz — JWCN R2 Reproducibility Package
 
-**Authoritative R2 implementation:** `src/train_dqn_pytorch.py`, not the older Stable-Baselines3 scripts. This is a local release candidate; GitHub publication and full independent reproduction have **not** been verified.
+**Authoritative R2 implementation:** `src/train_dqn_pytorch.py`, not the older Stable-Baselines3 scripts. This repository contains the version-controlled implementation and preserved experimental artifacts associated with the JWCN R2 revision. Independent end-to-end reproduction of all reported experiments has not yet been established.
 
 ## Repository layout
 
