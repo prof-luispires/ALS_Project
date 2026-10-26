@@ -1,0 +1,4 @@
+,pred_RF,pred_FSO,pred_THz
+true_RF,24969,0,1
+true_FSO,0,7100,0
+true_THz,745,1354,5831

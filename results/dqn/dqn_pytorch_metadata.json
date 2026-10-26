@@ -1,0 +1,60 @@
+{
+  "implementation": "Custom PyTorch DQN",
+  "problem_interpretation": "contextual one-step channel selection",
+  "gamma": 0.0,
+  "reward": "canonical QoS feasibility + minimum transmit-energy-per-bit reference",
+  "state_modes": {
+    "environmental": [
+      "distance_m",
+      "rain_rate_mmph",
+      "humidity_pct",
+      "visibility_km",
+      "Cn2"
+    ],
+    "full": [
+      "distance_m",
+      "rain_rate_mmph",
+      "humidity_pct",
+      "visibility_km",
+      "Cn2",
+      "SNR_RF_dB",
+      "SNR_FSO_dB",
+      "SNR_THz_dB",
+      "Eb_RF_J_per_bit",
+      "Eb_FSO_J_per_bit",
+      "Eb_THz_J_per_bit"
+    ]
+  },
+  "training_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_buffer": 50000,
+    "learning_starts": 1000,
+    "train_freq": 4,
+    "total_steps": 100000,
+    "epsilon_initial": 1.0,
+    "epsilon_final": 0.05,
+    "epsilon_fraction": 0.2,
+    "hidden_layers": [
+      64,
+      64
+    ],
+    "activation": "ReLU",
+    "optimizer": "Adam",
+    "loss": "SmoothL1Loss",
+    "gamma": 0.0
+  },
+  "evaluation": "2 complete realizations per scenario held out per seed",
+  "baselines": [
+    "AnalyticalReference",
+    "Random",
+    "MostFrequentClass"
+  ]
+}

@@ -1,0 +1,101 @@
+JWCN R2 — quantitative reproducibility audit
+Source manuscript: JWCN-D-26-00181_Revised_Manuscript_clean_REV(2).docx
+Dataset generation: executed src/generate_dataset.py with package defaults
+Canonical / regenerated dimensions: (16000, 25) / (16000, 25)
+Exact dataframe equality: True
+canonical best-channel counts:
+best_channel     0     1    2
+scenario                     
+clear            0  4000    0
+fog           1231  2736   33
+rain           473  3527    0
+worst         2497   710  793
+canonical all infeasible:
+scenario
+clear       0
+fog       745
+rain      409
+worst    1165
+regenerated best-channel counts:
+best_channel     0     1    2
+scenario                     
+clear            0  4000    0
+fog           1231  2736   33
+rain           473  3527    0
+worst         2497   710  793
+regenerated all infeasible:
+scenario
+clear       0
+fog       745
+rain      409
+worst    1165
+MANUSCRIPT TABLE 6: [['Scenario', 'RF', 'FSO', 'THz', 'Total', 'All-channel infeasible'], ['Clear', '0', '4000', '0', '4000', '0 (0.00%)'], ['Rain', '473', '3527', '0', '4000', '409 (10.23%)'], ['Fog', '1231', '2736', '33', '4000', '745 (18.63%)'], ['Worst', '2497', '710', '793', '4000', '1165 (29.13%)'], ['Total', '4201', '10,973', '826', '16,000', '2319 (14.49%)']]
+PASS Table12 environment_only LinearSVM accuracy_mean: artifact=0.950438, manuscript=0.950400
+PASS Table12 environment_only LinearSVM macro_f1_mean: artifact=0.929542, manuscript=0.929500
+PASS Table12 environment_only RBFSVM accuracy_mean: artifact=0.959469, manuscript=0.959500
+PASS Table12 environment_only RBFSVM macro_f1_mean: artifact=0.935237, manuscript=0.935200
+PASS Table12 environment_only RandomForest accuracy_mean: artifact=0.968406, manuscript=0.968400
+PASS Table12 environment_only RandomForest macro_f1_mean: artifact=0.955049, manuscript=0.955000
+PASS Table12 full_information LinearSVM accuracy_mean: artifact=0.986187, manuscript=0.986200
+PASS Table12 full_information LinearSVM macro_f1_mean: artifact=0.976683, manuscript=0.976700
+PASS Table12 full_information RBFSVM accuracy_mean: artifact=0.971531, manuscript=0.971500
+PASS Table12 full_information RBFSVM macro_f1_mean: artifact=0.949570, manuscript=0.949600
+PASS Table12 full_information RandomForest accuracy_mean: artifact=0.997812, manuscript=0.997800
+PASS Table12 full_information RandomForest macro_f1_mean: artifact=0.993280, manuscript=0.993300
+PASS Table13 environmental accuracy_mean: artifact=0.955125, manuscript=0.955100
+PASS Table13 environmental macro_f1_mean: artifact=0.920140, manuscript=0.920100
+PASS Table13 environmental infeasible pct: artifact=1.987500, manuscript=1.990000
+PASS Table13 full accuracy_mean: artifact=0.996625, manuscript=0.996600
+PASS Table13 full macro_f1_mean: artifact=0.993549, manuscript=0.993500
+PASS Table13 full infeasible pct: artifact=0.056250, manuscript=0.056000
+PASS Table15 A full_information accuracy_mean: artifact=0.581083, manuscript=0.581100
+PASS Table15 A full_information macro_f1_mean: artifact=0.245015, manuscript=0.245000
+PASS Table15 B environment_only accuracy_mean: artifact=0.569750, manuscript=0.569800
+PASS Table15 B environment_only macro_f1_mean: artifact=0.375473, manuscript=0.375500
+PASS Table15 B full_information accuracy_mean: artifact=0.896750, manuscript=0.896800
+PASS Table15 B full_information macro_f1_mean: artifact=0.631678, manuscript=0.631700
+PASS Table15 C environment_only accuracy_mean: artifact=0.816900, manuscript=0.816900
+PASS Table15 C environment_only macro_f1_mean: artifact=0.608582, manuscript=0.608600
+PASS Table15 C full_information accuracy_mean: artifact=0.947500, manuscript=0.947500
+PASS Table15 C full_information macro_f1_mean: artifact=0.914067, manuscript=0.914100
+PASS Table16 environment_only RandomForest accuracy_mean sigma0: artifact=0.968406, manuscript=0.968400
+PASS Table16 environment_only RandomForest accuracy_mean sigma1: artifact=0.968406, manuscript=0.968400
+PASS Table16 environment_only RandomForest accuracy_mean sigma2: artifact=0.968406, manuscript=0.968400
+PASS Table16 environment_only RandomForest accuracy_mean sigma3: artifact=0.968406, manuscript=0.968400
+PASS Table16 environment_only RandomForest accuracy_mean sigma5: artifact=0.968406, manuscript=0.968400
+PASS Table16 environment_only RandomForest macro_f1_mean sigma0: artifact=0.955049, manuscript=0.955000
+PASS Table16 environment_only RandomForest macro_f1_mean sigma1: artifact=0.955049, manuscript=0.955000
+PASS Table16 environment_only RandomForest macro_f1_mean sigma2: artifact=0.955049, manuscript=0.955000
+PASS Table16 environment_only RandomForest macro_f1_mean sigma3: artifact=0.955049, manuscript=0.955000
+PASS Table16 environment_only RandomForest macro_f1_mean sigma5: artifact=0.955049, manuscript=0.955000
+PASS Table16 full_information LinearSVM accuracy_mean sigma0: artifact=0.986187, manuscript=0.986200
+PASS Table16 full_information LinearSVM accuracy_mean sigma1: artifact=0.982563, manuscript=0.982600
+PASS Table16 full_information LinearSVM accuracy_mean sigma2: artifact=0.975219, manuscript=0.975200
+PASS Table16 full_information LinearSVM accuracy_mean sigma3: artifact=0.966000, manuscript=0.966000
+PASS Table16 full_information LinearSVM accuracy_mean sigma5: artifact=0.948187, manuscript=0.948200
+PASS Table16 full_information LinearSVM macro_f1_mean sigma0: artifact=0.976683, manuscript=0.976700
+PASS Table16 full_information LinearSVM macro_f1_mean sigma1: artifact=0.967493, manuscript=0.967500
+PASS Table16 full_information LinearSVM macro_f1_mean sigma2: artifact=0.953885, manuscript=0.953900
+PASS Table16 full_information LinearSVM macro_f1_mean sigma3: artifact=0.936060, manuscript=0.936100
+PASS Table16 full_information LinearSVM macro_f1_mean sigma5: artifact=0.906578, manuscript=0.906600
+PASS Table16 full_information RBFSVM accuracy_mean sigma0: artifact=0.971531, manuscript=0.971500
+PASS Table16 full_information RBFSVM accuracy_mean sigma1: artifact=0.967656, manuscript=0.967700
+PASS Table16 full_information RBFSVM accuracy_mean sigma2: artifact=0.955156, manuscript=0.955200
+PASS Table16 full_information RBFSVM accuracy_mean sigma3: artifact=0.940031, manuscript=0.940000
+PASS Table16 full_information RBFSVM accuracy_mean sigma5: artifact=0.909156, manuscript=0.909200
+PASS Table16 full_information RBFSVM macro_f1_mean sigma0: artifact=0.949570, manuscript=0.949600
+PASS Table16 full_information RBFSVM macro_f1_mean sigma1: artifact=0.942502, manuscript=0.942500
+PASS Table16 full_information RBFSVM macro_f1_mean sigma2: artifact=0.925407, manuscript=0.925400
+PASS Table16 full_information RBFSVM macro_f1_mean sigma3: artifact=0.903291, manuscript=0.903300
+PASS Table16 full_information RBFSVM macro_f1_mean sigma5: artifact=0.865340, manuscript=0.865300
+PASS Table16 full_information RandomForest accuracy_mean sigma0: artifact=0.997812, manuscript=0.997800
+PASS Table16 full_information RandomForest accuracy_mean sigma1: artifact=0.988500, manuscript=0.988500
+PASS Table16 full_information RandomForest accuracy_mean sigma2: artifact=0.976031, manuscript=0.976000
+PASS Table16 full_information RandomForest accuracy_mean sigma3: artifact=0.965469, manuscript=0.965500
+PASS Table16 full_information RandomForest accuracy_mean sigma5: artifact=0.947156, manuscript=0.947200
+PASS Table16 full_information RandomForest macro_f1_mean sigma0: artifact=0.993280, manuscript=0.993300
+PASS Table16 full_information RandomForest macro_f1_mean sigma1: artifact=0.967992, manuscript=0.968000
+PASS Table16 full_information RandomForest macro_f1_mean sigma2: artifact=0.936586, manuscript=0.936600
+PASS Table16 full_information RandomForest macro_f1_mean sigma3: artifact=0.909755, manuscript=0.909800
+PASS Table16 full_information RandomForest macro_f1_mean sigma5: artifact=0.867487, manuscript=0.867500
+FINAL TABLE VALUE CHECKS: 68 / 68 passed
